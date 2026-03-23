@@ -139,7 +139,7 @@ function App() {
               <img
                 src={logo}
                 alt="Global Domain Ventures"
-                className="h-14 md:h-16 w-auto drop-shadow-lg"
+                className="h-20 md:h-24 w-auto drop-shadow-lg"
               />
             </button>
 
