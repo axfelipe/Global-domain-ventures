@@ -491,7 +491,7 @@ function App() {
             Ready to start?
           </p>
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Get your website in 7–21 days
+            Get your website in 7–14 days
           </h2>
           <p className="text-xl text-gray-400 mb-10">
             Talk to us on WhatsApp and let’s discuss your business.
