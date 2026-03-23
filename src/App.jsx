@@ -95,7 +95,7 @@ function App() {
 
   const whyUs = [
     {
-      title: 'Delivered in 7–14 days',
+      title: 'Delivered in 7–21 days',
       description:
         'A realistic timeline with room for revisions and a smoother delivery process.',
       icon: Clock,
@@ -287,7 +287,7 @@ function App() {
                 <div className="flex items-center justify-between mb-8">
                   <div>
                     <p className="text-sm text-gray-400 mb-2">Starter Website Package</p>
-                    <h2 className="text-3xl font-bold">$400 setup</h2>
+                    <h2 className="text-3xl font-bold">$499 setup</h2>
                   </div>
                   <div className="text-right">
                     <p className="text-sm text-gray-400">Hosting + maintenance</p>
