@@ -522,7 +522,7 @@ function App() {
               <img
                 src={logo}
                 alt="Global Domain Ventures"
-                className="h-10 md:h-12 w-auto opacity-95"
+                className="h-20 md:h-24 w-auto drop-shadow-lg" ("h-10 md:h-12 w-auto opacity-95")
               />
             </div>
 
