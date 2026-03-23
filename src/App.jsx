@@ -351,7 +351,7 @@ function App() {
               <div className="space-y-5">
                 <div>
                   <p className="text-gray-400 text-sm">Website creation</p>
-                  <p className="text-3xl font-bold">$400–$500</p>
+                  <p className="text-3xl font-bold">$499–$699</p>
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Hosting + maintenance</p>
