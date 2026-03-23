@@ -491,7 +491,7 @@ function App() {
             Ready to start?
           </p>
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Get your website in 7–14 days
+            Get your website in 7–21 days
           </h2>
           <p className="text-xl text-gray-400 mb-10">
             Talk to us on WhatsApp and let’s discuss your business.
@@ -522,7 +522,7 @@ function App() {
               <img
                 src={logo}
                 alt="Global Domain Ventures"
-                className="h-20 md:h-24 w-auto drop-shadow-lg" ("h-10 md:h-12 w-auto opacity-95")
+                className="h-20 md:h-24 w-auto drop-shadow-lg"
               />
             </div>
 
