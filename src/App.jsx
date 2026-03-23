@@ -3,7 +3,6 @@ import {
   Menu,
   X,
   MessageCircle,
-  ArrowRight,
   ExternalLink,
   CheckCircle,
   Hammer,
@@ -60,7 +59,7 @@ function App() {
       category: 'Drywall Contractor',
       url: 'https://andradedrywallservices.com',
       description:
-        'Professional website built for a drywall services company focused on trust, speed, and local lead generation.',
+        'Professional website built for a drywall services company focused on trust, clarity, and local lead generation.',
     },
     {
       title: 'Rikos',
@@ -86,7 +85,7 @@ function App() {
   ]
 
   const packageFeatures = [
-    '1-page business website',
+    'Professional business website',
     'Mobile optimized',
     'Fast loading',
     'WhatsApp button included',
@@ -96,15 +95,15 @@ function App() {
 
   const whyUs = [
     {
-      title: 'Delivered in 5–10 days',
+      title: 'Delivered in 7–14 days',
       description:
-        'Fast turnaround without making the process complicated for you.',
+        'A realistic timeline with room for revisions and a smoother delivery process.',
       icon: Clock,
     },
     {
       title: 'Affordable pricing',
       description:
-        'Simple and clear pricing for small businesses that need results.',
+        'Simple and clear pricing for small businesses that need a professional online presence.',
       icon: BadgeDollarSign,
     },
     {
@@ -131,7 +130,7 @@ function App() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-24">
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="flex items-center gap-3"
@@ -140,7 +139,7 @@ function App() {
               <img
                 src={logo}
                 alt="Global Domain Ventures"
-                className="h-10 w-auto"
+                className="h-14 md:h-16 w-auto drop-shadow-lg"
               />
             </button>
 
@@ -174,7 +173,7 @@ function App() {
                 className="bg-green-600 hover:bg-green-700 text-white px-6 py-2.5 rounded-full font-medium transition-all hover:scale-105 flex items-center gap-2"
               >
                 <MessageCircle className="w-4 h-4" />
-                Contact on WhatsApp
+                WhatsApp
               </button>
             </div>
 
@@ -220,34 +219,33 @@ function App() {
                 className="w-full bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-medium transition-all flex items-center justify-center gap-2"
               >
                 <MessageCircle className="w-5 h-5" />
-                Contact on WhatsApp
+                WhatsApp
               </button>
             </div>
           </div>
         )}
       </nav>
 
-      <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 relative">
+      <section className="pt-36 pb-20 lg:pt-44 lg:pb-28 relative">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.18),transparent_35%),radial-gradient(circle_at_left,rgba(59,130,246,0.12),transparent_30%)]" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 text-blue-300 text-sm font-medium mb-6">
                 <Clock className="w-4 h-4" />
-                <span>Websites delivered in 5–10 business days</span>
+                <span>Websites delivered in 7–14 business days</span>
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                 Professional Websites for{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
                   Small Businesses
-                </span>{' '}
-                in the USA
+                </span>
               </h1>
 
               <p className="text-xl text-gray-400 mb-8 max-w-2xl">
                 We build your website, host it, and keep it running — starting
-                at $49/month. Simple, fast, and done for you.
+                at $49/month. Simple, professional, and done for you.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -256,7 +254,7 @@ function App() {
                   className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:scale-105 flex items-center justify-center gap-2"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  Contact on WhatsApp
+                  WhatsApp
                 </button>
 
                 <button
@@ -370,7 +368,7 @@ function App() {
                 className="mt-8 w-full bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-full font-semibold transition-all hover:scale-[1.02] flex items-center justify-center gap-2"
               >
                 <MessageCircle className="w-5 h-5" />
-                Start on WhatsApp
+                WhatsApp
               </button>
             </div>
           </div>
@@ -459,7 +457,7 @@ function App() {
               Why choose us
             </p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Simple service, clear pricing, fast delivery
+              Simple service, clear pricing, realistic delivery
             </h2>
             <p className="text-gray-400 text-lg">
               We focus on small businesses that want a professional website
@@ -493,10 +491,10 @@ function App() {
             Ready to start?
           </p>
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Get your website in 5–10 days
+            Get your website in 7–14 days
           </h2>
           <p className="text-xl text-gray-400 mb-10">
-            Contact us on WhatsApp and let’s talk about your business.
+            Talk to us on WhatsApp and let’s discuss your business.
           </p>
 
           <button
@@ -504,7 +502,7 @@ function App() {
             className="bg-green-600 hover:bg-green-700 text-white px-12 py-5 rounded-full font-semibold text-xl transition-all hover:scale-105 flex items-center justify-center gap-3 mx-auto"
           >
             <MessageCircle className="w-6 h-6" />
-            Contact on WhatsApp
+            WhatsApp
           </button>
         </div>
       </section>
@@ -512,7 +510,7 @@ function App() {
       <button
         onClick={openWhatsApp}
         className="fixed bottom-6 right-6 z-50 bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-2xl transition-all hover:scale-110 flex items-center justify-center"
-        aria-label="Contact us on WhatsApp"
+        aria-label="WhatsApp"
       >
         <MessageCircle className="w-7 h-7" />
       </button>
@@ -524,7 +522,7 @@ function App() {
               <img
                 src={logo}
                 alt="Global Domain Ventures"
-                className="h-8 w-auto"
+                className="h-10 md:h-12 w-auto opacity-95"
               />
             </div>
 
