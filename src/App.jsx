@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom'
 import {
   Menu,
   X,
@@ -18,13 +19,31 @@ import {
 } from 'lucide-react'
 import './App.css'
 import logo from './assets/logo.jpeg'
+import DrywallPage from './pages/DrywallPage'
+import PaintersPage from './pages/PaintersPage'
+import CleaningPage from './pages/CleaningPage'
+import RoofingPage from './pages/RoofingPage'
 
 const WHATSAPP_LINK =
   'https://wa.me/5531995195540?text=Hi,%20I%20want%20a%20website%20for%20my%20business.'
 
 function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/website-for-drywall-contractors" element={<DrywallPage />} />
+      <Route path="/website-for-painters" element={<PaintersPage />} />
+      <Route path="/website-for-cleaning-services" element={<CleaningPage />} />
+      <Route path="/website-for-roofing-contractors" element={<RoofingPage />} />
+    </Routes>
+  )
+}
+
+function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const location = useLocation()
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40)
@@ -32,7 +51,23 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [location.pathname])
+
   const scrollToSection = (id) => {
+    if (location.pathname !== '/') {
+      navigate('/')
+      setTimeout(() => {
+        const element = document.getElementById(id)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 150)
+      setIsMenuOpen(false)
+      return
+    }
+
     const element = document.getElementById(id)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
@@ -135,6 +170,33 @@ function App() {
     'Websites for contractors, painters, roofers, and local service businesses',
     'High-converting layout built to help you get more customers',
     'Professional online presence with simple monthly maintenance',
+  ]
+
+  const nichePages = [
+    {
+      title: 'Website for Drywall Contractors',
+      description:
+        'A page built to target drywall companies looking for a professional website.',
+      link: '/website-for-drywall-contractors',
+    },
+    {
+      title: 'Website for Painters',
+      description:
+        'SEO-focused page for painting businesses that want more local customers.',
+      link: '/website-for-painters',
+    },
+    {
+      title: 'Website for Cleaning Services',
+      description:
+        'A targeted page for cleaning companies that need a strong online presence.',
+      link: '/website-for-cleaning-services',
+    },
+    {
+      title: 'Website for Roofing Contractors',
+      description:
+        'Focused content for roofers who want more leads and more trust online.',
+      link: '/website-for-roofing-contractors',
+    },
   ]
 
   return (
@@ -474,6 +536,42 @@ function App() {
                 </div>
               )
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-[#0d1323] border-y border-blue-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-14">
+            <p className="text-blue-400 font-semibold tracking-wide uppercase text-sm mb-3">
+              SEO pages
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Targeted pages built for specific industries
+            </h2>
+            <p className="text-gray-400 text-lg">
+              These pages help us rank for more specific searches and show how
+              we position websites for each type of business.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {nichePages.map((page) => (
+              <div
+                key={page.title}
+                className="bg-[#111827] border border-blue-900/20 rounded-3xl p-8 hover:border-blue-500/40 transition-colors"
+              >
+                <h3 className="text-2xl font-semibold mb-3">{page.title}</h3>
+                <p className="text-gray-400 mb-6">{page.description}</p>
+                <Link
+                  to={page.link}
+                  className="inline-flex items-center gap-2 text-white font-medium hover:text-blue-300 transition-colors"
+                >
+                  View page
+                  <ExternalLink className="w-4 h-4" />
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
