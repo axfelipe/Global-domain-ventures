@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/draaianexavier",
+      "destination": "/draaianexavier/index.html"
+    },
+    {
+      "source": "/drfulano",
+      "destination": "/drfulano/index.html"
+    }
+  ]
+}
