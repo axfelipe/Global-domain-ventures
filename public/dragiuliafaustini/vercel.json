@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/dragiuliafaustini",
+      "destination": "/dragiuliafaustini/index.html"
+    },
+    {
+      "source": "/dra",
+      "destination": "/dra/index.html"
+    }
+  ]
+}
