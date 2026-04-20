@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/draaialaxavier",
+      "destination": "/draaialaxavier/index.html"
+    },
+    {
+      "source": "/draaialaxavier",
+      "destination": "/draaialaxavier/index.html"
+    }
+  ]
+}
