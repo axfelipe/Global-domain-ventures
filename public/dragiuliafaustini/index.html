@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dra. Giulia Faustini - Médica Psiquiatra em Ipatinga/MG. Atendimento humanizado para ansiedade, depressão, insônia e saúde mental. Agende sua consulta.">
+    <meta name="keywords" content="psiquiatra ipatinga, saúde mental, ansiedade, depressão, insônia, médica psiquiatra">
+    <title>Dra. Giulia Faustini | Saúde Mental & Bem-Estar</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --marrom: #5A3E36;
+            --marrom-escuro: #3D2A24;
+            --bege: #F5EDE6;
+            --bege-claro: #FAF6F2;
+            --nude: #D6B8A8;
+            --nude-escuro: #C4A08E;
+            --branco: #FFFFFF;
+            --texto: #4A3F3A;
+            --texto-claro: #7A6E68;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--texto);
+            background: var(--bege-claro);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* ===== BUTTONS ===== */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--marrom) 0%, var(--marrom-escuro) 100%);
+            color: var(--branco);
+            padding: 18px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(90, 62, 54, 0.3);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(90, 62, 54, 0.4);
+        }
+
+        .btn-primary svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        /* ===== FLOATING WHATSAPP ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6); }
+        }
+
+        .whatsapp-float svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--bege) 0%, var(--bege-claro) 50%, var(--nude) 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 150%;
+            background: radial-gradient(ellipse, rgba(214, 184, 168, 0.3) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: linear-gradient(to top, var(--bege-claro), transparent);
+            pointer-events: none;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .hero-content {
+            padding: 40px 0;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(90, 62, 54, 0.08);
+            color: var(--marrom);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            border: 1px solid rgba(90, 62, 54, 0.15);
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            color: var(--marrom);
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--nude-escuro);
+            font-weight: 400;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--texto-claro);
+            margin-bottom: 40px;
+            max-width: 500px;
+            line-height: 1.8;
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 480px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(90, 62, 54, 0.2);
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            border: 2px solid var(--nude);
+            border-radius: 20px;
+            top: -20px;
+            right: -20px;
+            z-index: 1;
+        }
+
+        .hero-image::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, var(--nude) 0%, transparent 70%);
+            bottom: -40px;
+            left: -40px;
+            opacity: 0.5;
+            z-index: 0;
+        }
+
+        /* ===== SECTIONS COMMON ===== */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.4rem;
+            color: var(--marrom);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--texto-claro);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            background: var(--branco);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(90, 62, 54, 0.15);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: var(--nude);
+            border-radius: 16px;
+            top: 20px;
+            left: 20px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .about-content h2 {
+            font-size: 2.2rem;
+            color: var(--marrom);
+            margin-bottom: 8px;
+        }
+
+        .about-role {
+            color: var(--nude-escuro);
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .about-text {
+            color: var(--texto-claro);
+            margin-bottom: 30px;
+            font-size: 1.05rem;
+        }
+
+        .about-features {
+            list-style: none;
+        }
+
+        .about-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            color: var(--texto);
+        }
+
+        .about-features li::before {
+            content: '✦';
+            color: var(--nude-escuro);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* ===== PAINS SECTION ===== */
+        .pains {
+            background: linear-gradient(180deg, var(--bege-claro) 0%, var(--bege) 100%);
+        }
+
+        .pains-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .pain-card {
+            background: var(--branco);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(90, 62, 54, 0.06);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(214, 184, 168, 0.2);
+        }
+
+        .pain-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(90, 62, 54, 0.12);
+        }
+
+        .pain-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--bege) 0%, var(--nude) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+        }
+
+        .pain-card h3 {
+            font-size: 1.2rem;
+            color: var(--marrom);
+            margin-bottom: 10px;
+        }
+
+        .pain-card p {
+            color: var(--texto-claro);
+            font-size: 0.95rem;
+        }
+
+        .pains-impact {
+            text-align: center;
+            background: var(--marrom);
+            color: var(--branco);
+            padding: 50px 40px;
+            border-radius: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pains-impact::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(214, 184, 168, 0.1) 0%, transparent 60%);
+        }
+
+        .pains-impact p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===== TRANSFORMATION SECTION ===== */
+        .transformation {
+            background: var(--branco);
+        }
+
+        .transformation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .transformation-image {
+            position: relative;
+        }
+
+        .transformation-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 25px 60px rgba(90, 62, 54, 0.15);
+        }
+
+        .transformation-content h2 {
+            font-size: 2.4rem;
+            color: var(--marrom);
+            margin-bottom: 20px;
+        }
+
+        .transformation-content > p {
+            color: var(--texto-claro);
+            margin-bottom: 30px;
+            font-size: 1.05rem;
+        }
+
+        .benefits-list {
+            list-style: none;
+        }
+
+        .benefits-list li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 16px 20px;
+            background: var(--bege-claro);
+            border-radius: 12px;
+            border-left: 3px solid var(--nude);
+            transition: all 0.3s ease;
+        }
+
+        .benefits-list li:hover {
+            transform: translateX(5px);
+            background: var(--bege);
+        }
+
+        .benefits-list li .check {
+            width: 28px;
+            height: 28px;
+            background: var(--marrom);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .benefits-list li span {
+            color: var(--texto);
+            font-weight: 500;
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .how-it-works {
+            background: linear-gradient(180deg, var(--bege) 0%, var(--bege-claro) 100%);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            position: relative;
+        }
+
+        .steps-grid::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 12%;
+            right: 12%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--nude), var(--marrom), var(--nude));
+            z-index: 0;
+        }
+
+        .step-card {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--branco);
+            border: 3px solid var(--nude);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--marrom);
+            box-shadow: 0 8px 25px rgba(90, 62, 54, 0.1);
+        }
+
+        .step-card h3 {
+            font-size: 1.1rem;
+            color: var(--marrom);
+            margin-bottom: 8px;
+        }
+
+        .step-card p {
+            color: var(--texto-claro);
+            font-size: 0.9rem;
+        }
+
+        /* ===== DIFFERENTIALS ===== */
+        .differentials {
+            background: var(--branco);
+        }
+
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 25px;
+        }
+
+        .diff-card {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--bege-claro);
+            border-radius: 16px;
+            transition: all 0.4s ease;
+            border: 1px solid transparent;
+        }
+
+        .diff-card:hover {
+            background: var(--branco);
+            border-color: var(--nude);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(90, 62, 54, 0.08);
+        }
+
+        .diff-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .diff-card h3 {
+            font-size: 1rem;
+            color: var(--marrom);
+            margin-bottom: 8px;
+        }
+
+        .diff-card p {
+            color: var(--texto-claro);
+            font-size: 0.85rem;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--marrom) 0%, var(--marrom-escuro) 100%);
+            color: var(--branco);
+            text-align: center;
+            padding: 100px 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(214, 184, 168, 0.15) 0%, transparent 70%);
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(214, 184, 168, 0.1) 0%, transparent 70%);
+        }
+
+        .cta-section h2 {
+            font-size: 2.6rem;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section .btn-primary {
+            background: var(--branco);
+            color: var(--marrom);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section .btn-primary:hover {
+            background: var(--bege);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--marrom-escuro);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 50px 30px 30px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--branco);
+            margin-bottom: 8px;
+        }
+
+        .footer-role {
+            color: var(--nude);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .footer-info {
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--nude);
+            margin: 20px auto;
+            opacity: 0.5;
+        }
+
+        .footer-disclaimer {
+            font-size: 0.8rem;
+            opacity: 0.6;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .footer-bottom {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-content {
+                order: 2;
+            }
+
+            .hero-image {
+                order: 1;
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .about-grid,
+            .transformation-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-image,
+            .transformation-image {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .pains-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+            .steps-grid::before {
+                display: none;
+            }
+
+            .diff-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .pains-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .diff-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+            }
+        }
+
+        /* ===== SMOOTH SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bege);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--nude);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--marrom);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5531999999999?text=Olá,%20Dra.%20Giulia!%20Gostaria%20de%20agendar%20uma%20consulta." class="whatsapp-float" target="_blank" aria-label="Agendar consulta pelo WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-tag reveal">Saúde Mental & Bem-Estar</div>
+                <h1 class="reveal reveal-delay-1">
+                    Sentir ansiedade é normal…<br>
+                    <em>Mas viver assim todos os dias não precisa ser.</em>
+                </h1>
+                <p class="hero-subtitle reveal reveal-delay-2">
+                    Atendimento médico focado em saúde mental para quem quer voltar a ter equilíbrio, leveza e qualidade de vida.
+                </p>
+                <a href="https://wa.me/5531999999999?text=Olá,%20Dra.%20Giulia!%20Gostaria%20de%20agendar%20uma%20consulta." class="btn-primary reveal reveal-delay-3" target="_blank">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Agendar consulta pelo WhatsApp
+                </a>
+            </div>
+            <div class="hero-image reveal reveal-delay-2">
+                <img src="giulia_faustini_01.jpg" alt="Dra. Giulia Faustini - Médica Psiquiatra">
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image reveal">
+                    <img src="Giulia_Faustini.jpg" alt="Dra. Giulia Faustini">
+                </div>
+                <div class="about-content">
+                    <h2 class="reveal">Dra. Giulia Faustini</h2>
+                    <p class="about-role reveal reveal-delay-1">Médica | Pós-graduada em Psiquiatria</p>
+                    <p class="about-text reveal reveal-delay-2">
+                        Médica com formação em psiquiatria, dedicada ao cuidado da saúde mental de forma individualizada e humanizada.
+                    </p>
+                    <ul class="about-features">
+                        <li class="reveal reveal-delay-1">Atendimento sem julgamentos</li>
+                        <li class="reveal reveal-delay-2">Escuta ativa e acolhimento</li>
+                        <li class="reveal reveal-delay-3">Tratamento baseado em evidência</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAINS SECTION -->
+    <section class="pains">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="reveal">Você tem sentido isso?</h2>
+                <p class="reveal reveal-delay-1">Reconhecer o que sente é o primeiro passo para a transformação</p>
+            </div>
+            <div class="pains-grid">
+                <div class="pain-card reveal">
+                    <div class="pain-icon">🌪️</div>
+                    <h3>Ansiedade constante</h3>
+                    <p>Aquela sensação de nervosismo que não passa, mesmo quando tudo parece estar bem.</p>
+                </div>
+                <div class="pain-card reveal reveal-delay-1">
+                    <div class="pain-icon">💭</div>
+                    <h3>Pensamentos acelerados</h3>
+                    <p>A mente que não para, mil ideias ao mesmo tempo, dificuldade de concentrar.</p>
+                </div>
+                <div class="pain-card reveal reveal-delay-2">
+                    <div class="pain-icon">🌙</div>
+                    <h3>Dificuldade para dormir</h3>
+                    <p>Deitar e não conseguir apagar, ou acordar no meio da nonte sem conseguir voltar a dormir.</p>
+                </div>
+                <div class="pain-card reveal">
+                    <div class="pain-icon">😔</div>
+                    <h3>Cansaço emocional</h3>
+                    <p>Sentir que não tem energia nem para as coisas que antes traziam alegria.</p>
+                </div>
+                <div class="pain-card reveal reveal-delay-1">
+                    <div class="pain-icon">😶</div>
+                    <h3>Falta de motivação</h3>
+                    <p>Saber o que precisa fazer, mas não conseguir começar. A procrastinação tomando conta.</p>
+                </div>
+                <div class="pain-card reveal reveal-delay-2">
+                    <div class="pain-icon">⚖️</div>
+                    <h3>Sobrecarga emocional</h3>
+                    <p>A sensação de estar carregando um peso que não é seu, o tempo todo.</p>
+                </div>
+            </div>
+            <div class="pains-impact reveal">
+                <p>"Você não precisa lidar com isso sozinho."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRANSFORMATION SECTION -->
+    <section class="transformation">
+        <div class="container">
+            <div class="transformation-grid">
+                <div class="transformation-content">
+                    <h2 class="reveal">É possível viver com mais equilíbrio</h2>
+                    <p class="reveal reveal-delay-1">Com acompanhamento médico adequado, você pode:</p>
+                    <ul class="benefits-list">
+                        <li class="reveal reveal-delay-1">
+                            <span class="check">✓</span>
+                            <span>Reduzir a ansiedade e recuperar a tranquilidade</span>
+                        </li>
+                        <li class="reveal reveal-delay-2">
+                            <span class="check">✓</span>
+                            <span>Dormir melhor e acordar com mais disposição</span>
+                        </li>
+                        <li class="reveal reveal-delay-3">
+                            <span class="check">✓</span>
+                            <span>Ter mais controle emocional no dia a dia</span>
+                        </li>
+                        <li class="reveal reveal-delay-1">
+                            <span class="check">✓</span>
+                            <span>Recuperar sua energia e vitalidade</span>
+                        </li>
+                        <li class="reveal reveal-delay-2">
+                            <span class="check">✓</span>
+                            <span>Voltar a sentir prazer nas coisas que ama</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="transformation-image reveal">
+                    <img src="giulia_faustini_03.jpg" alt="Bem-estar e saúde mental">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="reveal">Como funciona</h2>
+                <p class="reveal reveal-delay-1">Um processo simples para começar sua jornada</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card reveal">
+                    <div class="step-number">1</div>
+                    <h3>Clique no WhatsApp</h3>
+                    <p>Envie uma mensagem e conte um pouco sobre o que está sentindo</p>
+                </div>
+                <div class="step-card reveal reveal-delay-1">
+                    <div class="step-number">2</div>
+                    <h3>Escolha o horário</h3>
+                    <p>Encontre o melhor dia e horário para sua consulta</p>
+                </div>
+                <div class="step-card reveal reveal-delay-2">
+                    <div class="step-number">3</div>
+                    <h3>Online ou presencial</h3>
+                    <p>Atendimento da forma que for mais confortável para você</p>
+                </div>
+                <div class="step-card reveal reveal-delay-3">
+                    <div class="step-number">4</div>
+                    <h3>Acompanhamento</h3>
+                    <p>Tratamento personalizado e acompanhamento contínuo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFFERENTIALS -->
+    <section class="differentials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="reveal">Por que me escolher?</h2>
+                <p class="reveal reveal-delay-1">Um cuidado diferenciado para quem busca resultados reais</p>
+            </div>
+            <div class="diff-grid">
+                <div class="diff-card reveal">
+                    <div class="diff-icon">🤝</div>
+                    <h3>Atendimento humanizado</h3>
+                    <p>Cada paciente é único e tratado com respeito e empatia</p>
+                </div>
+                <div class="diff-card reveal reveal-delay-1">
+                    <div class="diff-icon">⏱️</div>
+                    <h3>Tempo adequado</h3>
+                    <p>Consultas com a duração necessária para ouvir de verdade</p>
+                </div>
+                <div class="diff-card reveal reveal-delay-2">
+                    <div class="diff-icon">🎯</div>
+                    <h3>Abordagem individual</h3>
+                    <p>Tratamento adaptado às suas necessidades específicas</p>
+                </div>
+                <div class="diff-card reveal reveal-delay-3">
+                    <div class="diff-icon">🔒</div>
+                    <h3>Sigilo e segurança</h3>
+                    <p>Seus dados e conversas são sempre protegidos</p>
+                </div>
+                <div class="diff-card reveal reveal-delay-1">
+                    <div class="diff-icon">🔍</div>
+                    <h3>Foco na causa</h3>
+                    <p>Tratamos a raiz do problema, não apenas os sintomas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <h2 class="reveal">Você merece cuidar da sua saúde mental</h2>
+        <p class="reveal reveal-delay-1">Dê o primeiro passo para uma vida mais leve e equilibrada. Estou aqui para te ajudar.</p>
+        <a href="https://wa.me/5531999999999?text=Olá,%20Dra.%20Giulia!%20Gostaria%20de%20agendar%20uma%20consulta." class="btn-primary reveal reveal-delay-2" target="_blank">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Agendar agora pelo WhatsApp
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Dra. Giulia Faustini</div>
+            <div class="footer-role">Médica Psiquiatra | Ipatinga - MG</div>
+            <div class="footer-info">
+                CRM MG 87806 | Atendimento online e presencial
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-disclaimer">
+                Este site não substitui consulta médica presencial em casos de urgência. 
+                Em situações de emergência, procure atendimento em unidades de pronto atendimento ou ligue para o SAMU (192).
+            </div>
+            <div class="footer-bottom">
+                © 2026 Dra. Giulia Faustini. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        // Reveal on scroll
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            const elementVisible = 100;
+
+            revealElements.forEach((element) => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+        // Trigger initial reveal
+        revealOnScroll();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
