@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/draaialaxavier",
-      "destination": "/draaialaxavier/index.html"
+      "destination": "/draaianexavier/index.html"
     },
     {
-      "source": "/draaialaxavier",
-      "destination": "/draaialaxavier/index.html"
+      "source": "/dra",
+      "destination": "/dra/index.html"
     }
   ]
 }
