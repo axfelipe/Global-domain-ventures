@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Aiane Xavier Felipe Batalha | Médica & Nutróloga</title>
+    <meta name="description" content="Dra. Aiane Batalha - Médica, Mestre em Saúde da Família e Nutróloga em Ipatinga/MG. Atendimento humanizado com foco em saúde da mulher, prevenção e qualidade de vida.">
+    <meta name="keywords" content="médica Ipatinga, nutrologia Ipatinga, saúde da mulher, consulta médica particular, Dra Aiane Batalha">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'medical-white': '#FAFAF8',
+                        'medical-cream': '#F5F0E8',
+                        'medical-beige': '#E8DFD0',
+                        'medical-gold': '#C9A962',
+                        'medical-gold-light': '#D4B978',
+                        'medical-brown': '#8B7355',
+                        'medical-terra': '#A67B5B',
+                        'medical-sage': '#9CAF88',
+                        'medical-dark': '#2C2C2C',
+                    },
+                    fontFamily: {
+                        'serif': ['Cormorant Garamond', 'serif'],
+                        'sans': ['Montserrat', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out',
+                        'fade-in': 'fadeIn 1s ease-out',
+                        'slide-in-right': 'slideInRight 0.6s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideInRight: {
+                            '0%': { opacity: '0', transform: 'translateX(50px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .text-shadow-soft {
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .gradient-gold {
+            background: linear-gradient(135deg, #C9A962 0%, #D4B978 50%, #C9A962 100%);
+        }
+        .gradient-cream {
+            background: linear-gradient(180deg, #FAFAF8 0%, #F5F0E8 100%);
+        }
+        .image-hero {
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, #C9A962, #E8DFD0);
+        }
+        @media (max-width: 768px) {
+            .timeline-line {
+                left: 20px;
+            }
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .whatsapp-pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body class="font-sans text-medical-dark bg-medical-white antialiased overflow-x-hidden">
+
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5531999999999" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform whatsapp-pulse flex items-center gap-2 group">
+        <i data-lucide="message-circle" class="w-6 h-6"></i>
+        <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 whitespace-nowrap font-medium">Agendar</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-40 bg-medical-white/95 backdrop-blur-md border-b border-medical-beige/50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2">
+                    <span class="font-serif text-2xl font-semibold text-medical-brown">Dra.</span>
+                    <span class="font-serif text-2xl italic text-medical-gold">Aiane Batalha</span>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#sobre" class="text-sm font-medium text-medical-dark/70 hover:text-medical-gold transition-colors">Sobre</a>
+                    <a href="#trajetoria" class="text-sm font-medium text-medical-dark/70 hover:text-medical-gold transition-colors">Trajetória</a>
+                    <a href="#atendimento" class="text-sm font-medium text-medical-dark/70 hover:text-medical-gold transition-colors">Atendimento</a>
+                    <a href="#humanidade" class="text-sm font-medium text-medical-dark/70 hover:text-medical-gold transition-colors">Valores</a>
+                    <a href="#contato" class="px-6 py-2.5 bg-medical-gold text-white text-sm font-medium rounded-full hover:bg-medical-gold-light transition-colors shadow-md">
+                        Agendar Consulta
+                    </a>
+                </div>
+
+                <button class="md:hidden p-2" onclick="toggleMenu()">
+                    <i data-lucide="menu" class="w-6 h-6 text-medical-dark"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-medical-white border-t border-medical-beige">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#sobre" class="block py-2 text-medical-dark/80">Sobre</a>
+                <a href="#trajetoria" class="block py-2 text-medical-dark/80">Trajetória</a>
+                <a href="#atendimento" class="block py-2 text-medical-dark/80">Atendimento</a>
+                <a href="#humanidade" class="block py-2 text-medical-dark/80">Valores</a>
+                <a href="#contato" class="block py-3 px-4 bg-medical-gold text-white text-center rounded-lg">Agendar Consulta</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen pt-20 overflow-hidden bg-gradient-to-br from-medical-white via-medical-cream to-medical-beige/30">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-medical-beige/20 rounded-l-full blur-3xl -translate-y-1/4 translate-x-1/4"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-10rem)]">
+                
+                <!-- Text Content -->
+                <div class="order-2 lg:order-1 space-y-8 animate-fade-in-up">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-medical-gold/10 rounded-full border border-medical-gold/20">
+                        <i data-lucide="award" class="w-4 h-4 text-medical-gold"></i>
+                        <span class="text-sm font-medium text-medical-gold">Mestre em Saúde da Família</span>
+                    </div>
+                    
+                    <h1 class="font-serif text-5xl lg:text-7xl font-light leading-tight text-medical-dark">
+                        Cuidado que <br>
+                        <span class="italic text-medical-gold">transforma</span> vidas
+                    </h1>
+                    
+                    <p class="text-lg text-medical-dark/70 leading-relaxed max-w-lg">
+                        Atendimento médico humanizado, integrando ciência, empatia e dedicação para cuidar de você em todas as fases da vida.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://wa.me/5531999999999" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] text-white rounded-full font-medium hover:bg-[#128C7E] transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            Agendar pelo WhatsApp
+                        </a>
+                        <a href="#sobre" class="inline-flex items-center gap-3 px-8 py-4 border-2 border-medical-gold text-medical-gold rounded-full font-medium hover:bg-medical-gold hover:text-white transition-all">
+                            Conheça a médica
+                            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Selos -->
+                    <div class="flex flex-wrap gap-6 pt-4">
+                        <div class="flex items-center gap-2 text-sm text-medical-dark/60">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-medical-sage"></i>
+                            <span>Médica</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-medical-dark/60">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-medical-sage"></i>
+                            <span>Mestre</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-medical-dark/60">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-medical-sage"></i>
+                            <span>Professora</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-medical-dark/60">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-medical-sage"></i>
+                            <span>Nutróloga</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="order-1 lg:order-2 relative animate-slide-in-right">
+                    <div class="relative z-10">
+                        <img
+                            src="/draaianexavier/IG_AIANE_FOT01.jpg"
+                            alt="Dra. Aiane Batalha"
+                            class="w-full max-w-xs mx-auto lg:max-w-sm rounded-3xl shadow-2xl object-contain"
+                        >
+                    </div>
+
+                    <!-- Decorative Elements -->
+                    <div class="absolute -top-8 -right-8 w-32 h-32 bg-medical-gold/20 rounded-full blur-2xl"></div>
+                    <div class="absolute bottom-0 -left-14 w-40 h-40 bg-medical-sage/20 rounded-full blur-2xl"></div>
+
+                    <!-- Floating Card -->
+                    <div class="absolute bottom-[-12px] -left-24 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-xl animate-float hidden lg:block">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-medical-gold/10 rounded-full flex items-center justify-center">
+                                <i data-lucide="heart-pulse" class="w-6 h-6 text-medical-gold"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-medical-dark/60">Experiência</p>
+                                <p class="font-serif text-lg font-semibold text-medical-dark">+10 anos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-24 bg-white scroll-reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <img src="/draaianexavier/IG_AIANE_FOT02.jpg" alt="Dra. Aiane - Múltiplas identidades" class="w-full rounded-3xl shadow-lg">
+                    <div class="absolute inset-0 bg-gradient-to-t from-medical-gold/10 to-transparent rounded-3xl"></div>
+                </div>
+                
+                <div class="space-y-6">
+                    <span class="text-medical-gold font-medium tracking-wider text-sm uppercase">Sobre a médica</span>
+                    <h2 class="font-serif text-4xl lg:text-5xl font-light text-medical-dark">
+                        Mais do que uma <span class="italic text-medical-gold">médica</span>
+                    </h2>
+                    <p class="text-medical-dark/70 leading-relaxed text-lg">
+                        Sou a Dra. Aiane Xavier Felipe Batalha, médica formada pela UNIVAÇO (2014) e também farmacêutica pela UNIVALE (2004). Minha trajetória é marcada pela busca constante de conhecimento para oferecer o melhor aos meus pacientes.
+                    </p>
+                    <p class="text-medical-dark/70 leading-relaxed text-lg">
+                        Mestre em Saúde da Família e Comunidade pela UNINOVAFAPI (2023), atualmente sou docente na AFYA Faculdade de Ciências Médicas de Ipatinga e atuo na Clínica Mais Você, onde tenho a oportunidade de cuidar de pessoas com atenção integral e humanizada.
+                    </p>
+                    <p class="text-medical-dark/70 leading-relaxed text-lg">
+                        Além da medicina, sou mãe de dois príncipes, movida por desafios e apaixonada por transformar vidas através da saúde preventiva e da nutrologia.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <div class="px-6 py-3 bg-medical-cream rounded-full text-sm font-medium text-medical-brown">
+                            <i data-lucide="graduation-cap" class="w-4 h-4 inline mr-2"></i>
+                            Mestre em Saúde da Família
+                        </div>
+                        <div class="px-6 py-3 bg-medical-cream rounded-full text-sm font-medium text-medical-brown">
+                            <i data-lucide="book-open" class="w-4 h-4 inline mr-2"></i>
+                            Professora Universitária
+                        </div>
+                        <div class="px-6 py-3 bg-medical-cream rounded-full text-sm font-medium text-medical-brown">
+                            <i data-lucide="apple" class="w-4 h-4 inline mr-2"></i>
+                            Especialização em Nutrologia
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="py-24 bg-medical-cream/30 scroll-reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-medical-gold font-medium tracking-wider text-sm uppercase">Por que me escolher</span>
+                <h2 class="font-serif text-4xl lg:text-5xl font-light text-medical-dark mt-4">
+                    Diferenciais do <span class="italic text-medical-gold">atendimento</span>
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover-lift border border-medical-beige/50">
+                    <div class="w-14 h-14 bg-medical-gold/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="ear" class="w-7 h-7 text-medical-gold"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold text-medical-dark mb-3">Escuta Qualificada</h3>
+                    <p class="text-medical-dark/70 text-sm leading-relaxed">Tempo dedicado para entender suas queixas, histórico e necessidades individuais. Cada paciente é único.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover-lift border border-medical-beige/50">
+                    <div class="w-14 h-14 bg-medical-gold/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="heart-handshake" class="w-7 h-7 text-medical-gold"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold text-medical-dark mb-3">Atendimento Humanizado</h3>
+                    <p class="text-medical-dark/70 text-sm leading-relaxed">Relação médico-paciente baseada em empatia, respeito e acolhimento. Você será ouvida e compreendida.</p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover-lift border border-medical-beige/50">
+                    <div class="w-14 h-14 bg-medical-gold/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="activity" class="w-7 h-7 text-medical-gold"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold text-medical-dark mb-3">Acompanhamento Contínuo</h3>
+                    <p class="text-medical-dark/70 text-sm leading-relaxed">Cuidado que vai além da consulta. Acompanhamento próximo da sua evolução e resultados.</p>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover-lift border border-medical-beige/50">
+                    <div class="w-14 h-14 bg-medical-gold/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="scan" class="w-7 h-7 text-medical-gold"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold text-medical-dark mb-3">Visão Integral</h3>
+                    <p class="text-medical-dark/70 text-sm leading-relaxed">Abordagem que considera corpo, mente e estilo de vida. Saúde como um todo, não apenas sintomas.</p>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover-lift border border-medical-beige/50">
+                    <div class="w-14 h-14 bg-medical-gold/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="shield-check" class="w-7 h-7 text-medical-gold"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold text-medical-dark mb-3">Foco em Prevenção</h3>
+                    <p class="text-medical-dark/70 text-sm leading-relaxed">Medicina preventiva para evitar doenças e promover longevidade com qualidade de vida.</p>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover-lift border border-medical-beige/50">
+                    <div class="w-14 h-14 bg-medical-gold/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="pill" class="w-7 h-7 text-medical-gold"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold text-medical-dark mb-3">Dupla Formação</h3>
+                    <p class="text-medical-dark/70 text-sm leading-relaxed">Formação em Medicina e Farmácia para prescrições seguras e conhecimento profundo de medicamentos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Áreas de Atendimento -->
+    <section id="atendimento" class="py-24 bg-white scroll-reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-medical-gold font-medium tracking-wider text-sm uppercase">Especialidades</span>
+                <h2 class="font-serif text-4xl lg:text-5xl font-light text-medical-dark mt-4">
+                    Áreas de <span class="italic text-medical-gold">atendimento</span>
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Saúde da Mulher -->
+                <div class="group relative overflow-hidden rounded-2xl bg-medical-cream/50 p-8 hover:bg-medical-gold/5 transition-colors border border-medical-beige/30">
+                    <div class="flex items-start gap-6">
+                        <div class="w-16 h-16 bg-medical-gold/20 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-medical-gold/30 transition-colors">
+                            <i data-lucide="user" class="w-8 h-8 text-medical-gold"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-semibold text-medical-dark mb-2">Saúde da Mulher</h3>
+                            <p class="text-medical-dark/70 leading-relaxed">Acompanhamento integral da saúde feminina em todas as fases: adolescência, climatério, menopausa e envelhecimento saudável.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Nutrologia -->
+                <div class="group relative overflow-hidden rounded-2xl bg-medical-cream/50 p-8 hover:bg-medical-gold/5 transition-colors border border-medical-beige/30">
+                    <div class="flex items-start gap-6">
+                        <div class="w-16 h-16 bg-medical-gold/20 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-medical-gold/30 transition-colors">
+                            <i data-lucide="apple" class="w-8 h-8 text-medical-gold"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-semibold text-medical-dark mb-2">Nutrologia</h3>
+                            <p class="text-medical-dark/70 leading-relaxed">Nutrição clínica aplicada à medicina. Reeducação alimentar, suplementação inteligente e tratamento de doenças metabólicas.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Qualidade de Vida -->
+                <div class="group relative overflow-hidden rounded-2xl bg-medical-cream/50 p-8 hover:bg-medical-gold/5 transition-colors border border-medical-beige/30">
+                    <div class="flex items-start gap-6">
+                        <div class="w-16 h-16 bg-medical-gold/20 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-medical-gold/30 transition-colors">
+                            <i data-lucide="sparkles" class="w-8 h-8 text-medical-gold"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-semibold text-medical-dark mb-2">Qualidade de Vida</h3>
+                            <p class="text-medical-dark/70 leading-relaxed">Promoção de hábitos saudáveis, gestão do estresse, sono adequado e equilíbrio entre corpo e mente.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Prevenção -->
+                <div class="group relative overflow-hidden rounded-2xl bg-medical-cream/50 p-8 hover:bg-medical-gold/5 transition-colors border border-medical-beige/30">
+                    <div class="flex items-start gap-6">
+                        <div class="w-16 h-16 bg-medical-gold/20 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-medical-gold/30 transition-colors">
+                            <i data-lucide="shield" class="w-8 h-8 text-medical-gold"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl font-semibold text-medical-dark mb-2">Prevenção e Longevidade</h3>
+                            <p class="text-medical-dark/70 leading-relaxed">Check-ups completos, avaliação de riscos, vacinação e estratégias personalizadas para envelhecer com saúde.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trajetória / Timeline -->
+    <section id="trajetoria" class="py-24 bg-medical-cream/20 scroll-reveal">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-medical-gold font-medium tracking-wider text-sm uppercase">Formação</span>
+                <h2 class="font-serif text-4xl lg:text-5xl font-light text-medical-dark mt-4">
+                    Minha <span class="italic text-medical-gold">trajetória</span>
+                </h2>
+            </div>
+            
+            <div class="relative">
+                <div class="timeline-line"></div>
+                
+                <!-- Timeline Items -->
+                <div class="space-y-12">
+                    <!-- 2023 - Nutrologia -->
+                    <div class="relative flex items-center md:justify-between md:flex-row flex-col gap-4">
+                        <div class="md:w-5/12 md:text-right text-center order-2 md:order-1">
+                            <div class="bg-white p-6 rounded-2xl shadow-sm border border-medical-beige/50 hover-lift">
+                                <span class="text-medical-gold font-bold text-lg">2023</span>
+                                <h3 class="font-serif text-xl font-semibold text-medical-dark mt-1">Especialização em Nutrologia</h3>
+                                <p class="text-medical-dark/60 text-sm mt-2">IPEMED - Instituto de Pesquisa e Ensino Médico de Minas Gerais</p>
+                            </div>
+                        </div>
+                        <div class="w-4 h-4 bg-medical-gold rounded-full border-4 border-medical-cream z-10 order-1 md:order-2"></div>
+                        <div class="md:w-5/12 order-3"></div>
+                    </div>
+                    
+                    <!-- 2023 - Mestrado -->
+                    <div class="relative flex items-center md:justify-between md:flex-row flex-col gap-4">
+                        <div class="md:w-5/12 order-2 md:order-1"></div>
+                        <div class="w-4 h-4 bg-medical-gold rounded-full border-4 border-medical-cream z-10 order-1 md:order-2"></div>
+                        <div class="md:w-5/12 md:text-left text-center order-3">
+                            <div class="bg-white p-6 rounded-2xl shadow-sm border border-medical-beige/50 hover-lift">
+                                <span class="text-medical-gold font-bold text-lg">2023</span>
+                                <h3 class="font-serif text-xl font-semibold text-medical-dark mt-1">Mestrado em Saúde da Família</h3>
+                                <p class="text-medical-dark/60 text-sm mt-2">UNINOVAFAPI - Centro Universitário</p>
+                                <p class="text-medical-dark/50 text-xs mt-1">Tese: Álbum seriado sobre assimetria craniana posicional</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 2020-2022 - Especialização -->
+                    <div class="relative flex items-center md:justify-between md:flex-row flex-col gap-4">
+                        <div class="md:w-5/12 md:text-right text-center order-2 md:order-1">
+                            <div class="bg-white p-6 rounded-2xl shadow-sm border border-medical-beige/50 hover-lift">
+                                <span class="text-medical-gold font-bold text-lg">2020-2022</span>
+                                <h3 class="font-serif text-xl font-semibold text-medical-dark mt-1">Especialização em Saúde da Família</h3>
+                                <p class="text-medical-dark/60 text-sm mt-2">IESP PPProv - Instituto de Ensino Superior do Piauí</p>
+                            </div>
+                        </div>
+                        <div class="w-4 h-4 bg-medical-gold rounded-full border-4 border-medical-cream z-10 order-1 md:order-2"></div>
+                        <div class="md:w-5/12 order-3"></div>
+                    </div>
+                    
+                    <!-- 2018 - Docência -->
+                    <div class="relative flex items-center md:justify-between md:flex-row flex-col gap-4">
+                        <div class="md:w-5/12 order-2 md:order-1"></div>
+                        <div class="w-4 h-4 bg-medical-gold rounded-full border-4 border-medical-cream z-10 order-1 md:order-2"></div>
+                        <div class="md:w-5/12 md:text-left text-center order-3">
+                            <div class="bg-white p-6 rounded-2xl shadow-sm border border-medical-beige/50 hover-lift">
+                                <span class="text-medical-gold font-bold text-lg">2018 - Atual</span>
+                                <h3 class="font-serif text-xl font-semibold text-medical-dark mt-1">Docência Universitária</h3>
+                                <p class="text-medical-dark/60 text-sm mt-2">AFYA Faculdade de Ciências Médicas de Ipatinga</p>
+                                <p class="text-medical-dark/50 text-xs mt-1">Disciplina: IESC - Integração Ensino Serviço Comunidade</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 2014 - Medicina -->
+                    <div class="relative flex items-center md:justify-between md:flex-row flex-col gap-4">
+                        <div class="md:w-5/12 md:text-right text-center order-2 md:order-1">
+                            <div class="bg-white p-6 rounded-2xl shadow-sm border border-medical-beige/50 hover-lift">
+                                <span class="text-medical-gold font-bold text-lg">2014</span>
+                                <h3 class="font-serif text-xl font-semibold text-medical-dark mt-1">Graduação em Medicina</h3>
+                                <p class="text-medical-dark/60 text-sm mt-2">UNIVAÇO - Faculdade de Medicina do Vale do Aço</p>
+                            </div>
+                        </div>
+                        <div class="w-4 h-4 bg-medical-gold rounded-full border-4 border-medical-cream z-10 order-1 md:order-2"></div>
+                        <div class="md:w-5/12 order-3"></div>
+                    </div>
+                    
+                    <!-- 2004 - Farmácia -->
+                    <div class="relative flex items-center md:justify-between md:flex-row flex-col gap-4">
+                        <div class="md:w-5/12 order-2 md:order-1"></div>
+                        <div class="w-4 h-4 bg-medical-gold rounded-full border-4 border-medical-cream z-10 order-1 md:order-2"></div>
+                        <div class="md:w-5/12 md:text-left text-center order-3">
+                            <div class="bg-white p-6 rounded-2xl shadow-sm border border-medical-beige/50 hover-lift">
+                                <span class="text-medical-gold font-bold text-lg">2004</span>
+                                <h3 class="font-serif text-xl font-semibold text-medical-dark mt-1">Graduação em Farmácia</h3>
+                                <p class="text-medical-dark/60 text-sm mt-2">UNIVALE - Universidade Vale do Rio Doce</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Humana / Valores -->
+    <section id="humanidade" class="py-24 bg-white scroll-reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6 order-2 lg:order-1">
+                    <span class="text-medical-gold font-medium tracking-wider text-sm uppercase">Além da medicina</span>
+                    <h2 class="font-serif text-4xl lg:text-5xl font-light text-medical-dark">
+                        Meus <span class="italic text-medical-gold">valores</span>
+                    </h2>
+                    <p class="text-medical-dark/70 leading-relaxed text-lg">
+                        Acredito que a medicina vai muito além de diagnósticos e prescrições. É sobre conexão humana, empatia genuína e cuidado integral. Como mãe, professora e médica, levo para cada consulta não apenas meu conhecimento técnico, mas também minha experiência de vida.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 pt-6">
+                        <div class="flex items-center gap-3 p-4 bg-medical-cream/50 rounded-xl">
+                            <i data-lucide="heart" class="w-5 h-5 text-medical-gold"></i>
+                            <span class="font-medium text-medical-dark">Família</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 bg-medical-cream/50 rounded-xl">
+                            <i data-lucide="hand-heart" class="w-5 h-5 text-medical-gold"></i>
+                            <span class="font-medium text-medical-dark">Empatia</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 bg-medical-cream/50 rounded-xl">
+                            <i data-lucide="sparkles" class="w-5 h-5 text-medical-gold"></i>
+                            <span class="font-medium text-medical-dark">Fé</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 bg-medical-cream/50 rounded-xl">
+                            <i data-lucide="check-check" class="w-5 h-5 text-medical-gold"></i>
+                            <span class="font-medium text-medical-dark">Sinceridade</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 bg-medical-cream/50 rounded-xl col-span-2">
+                            <i data-lucide="trending-up" class="w-5 h-5 text-medical-gold"></i>
+                            <span class="font-medium text-medical-dark">1% melhor todo dia</span>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-6 border-t border-medical-beige">
+                        <p class="text-medical-dark/60 italic text-sm">
+                            "Amo praia, já fui skatista, minha linguagem do amor é tempo de qualidade, e já realizei meu maior sonho: me casar e formar minha família."
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="relative order-1 lg:order-2">
+                    <img src="/draaianexavier/IG_AIANE_FOT04.jpg" alt="Valores da Dra. Aiane" class="w-full rounded-3xl shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Forte -->
+    <section class="py-24 bg-gradient-to-br from-medical-brown to-medical-terra text-white scroll-reveal">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-serif text-4xl lg:text-6xl font-light mb-6">
+                Pronta para cuidar <span class="italic text-medical-gold-light">da sua saúde?</span>
+            </h2>
+            <p class="text-white/80 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+                Agende sua consulta e dê o primeiro passo para uma vida mais saudável. Atendimento personalizado, humanizado e focado em você.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/5531999999999" target="_blank" class="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#25D366] text-white rounded-full font-semibold text-lg hover:bg-[#128C7E] transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                    <i data-lucide="message-circle" class="w-6 h-6"></i>
+                    Agendar pelo WhatsApp
+                </a>
+                <a href="tel:+5531999999999" class="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white/10 backdrop-blur-sm text-white rounded-full font-semibold text-lg hover:bg-white/20 transition-all border border-white/30">
+                    <i data-lucide="phone" class="w-6 h-6"></i>
+                    Ligar Agora
+                </a>
+            </div>
+            
+            <p class="mt-8 text-white/60 text-sm">
+                Atendimento particular • Convênios • Telemedicina disponível
+            </p>
+        </div>
+    </section>
+
+    <!-- Local de Atendimento -->
+    <section id="contato" class="py-24 bg-medical-cream/30 scroll-reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-medical-gold font-medium tracking-wider text-sm uppercase">Onde atendo</span>
+                <h2 class="font-serif text-4xl lg:text-5xl font-light text-medical-dark mt-4">
+                    Local de <span class="italic text-medical-gold">atendimento</span>
+                </h2>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-medical-beige/50">
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="w-12 h-12 bg-medical-gold/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-medical-gold"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl font-semibold text-medical-dark">Clínica Mais Você</h3>
+                            <p class="text-medical-dark/60 mt-1">Ipatinga, MG</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4 text-medical-dark/70">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="navigation" class="w-5 h-5 text-medical-gold mt-0.5"></i>
+                            <p>[Endereço completo da clínica]<br>Ipatinga - MG</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="clock" class="w-5 h-5 text-medical-gold"></i>
+                            <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h (sob agendamento)</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-medical-gold"></i>
+                            <p>(31) 99999-9999</p>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/5531999999999" target="_blank" class="mt-6 w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-medical-gold text-white rounded-xl font-medium hover:bg-medical-gold-light transition-colors">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        Agendar Consulta
+                    </a>
+                </div>
+                
+                <div class="bg-medical-beige/30 rounded-2xl overflow-hidden h-96 lg:h-auto flex items-center justify-center">
+                    <div class="text-center p-8">
+                        <i data-lucide="map" class="w-16 h-16 text-medical-gold/40 mx-auto mb-4"></i>
+                        <p class="text-medical-dark/60">Mapa de localização</p>
+                        <p class="text-medical-dark/40 text-sm mt-2">(Integração com Google Maps)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-white scroll-reveal">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-medical-gold font-medium tracking-wider text-sm uppercase">Dúvidas</span>
+                <h2 class="font-serif text-4xl font-light text-medical-dark mt-4">
+                    Perguntas <span class="italic text-medical-gold">frequentes</span>
+                </h2>
+            </div>
+            
+            <div class="space-y-4" id="faq-container">
+                <div class="border border-medical-beige rounded-xl overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex items-center justify-between bg-medical-cream/30 hover:bg-medical-cream/50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-medium text-medical-dark">Como agendar uma consulta?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-medical-gold transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 py-4 bg-white text-medical-dark/70 text-sm leading-relaxed border-t border-medical-beige/50">
+                        Você pode agendar sua consulta diretamente pelo WhatsApp clicando no botão verde no canto da tela, ou ligando para nosso número de telefone. Responderemos o mais breve possível para confirmar seu horário.
+                    </div>
+                </div>
+                
+                <div class="border border-medical-beige rounded-xl overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex items-center justify-between bg-medical-cream/30 hover:bg-medical-cream/50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-medium text-medical-dark">Quais convênios são aceitos?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-medical-gold transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 py-4 bg-white text-medical-dark/70 text-sm leading-relaxed border-t border-medical-beige/50">
+                        Atendemos pacientes particulares e diversos convênios. Entre em contato pelo WhatsApp para verificar se seu plano de saúde é aceito e consultar valores.
+                    </div>
+                </div>
+                
+                <div class="border border-medical-beige rounded-xl overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex items-center justify-between bg-medical-cream/30 hover:bg-medical-cream/50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-medium text-medical-dark">Qual o tempo médio de duração da consulta?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-medical-gold transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 py-4 bg-white text-medical-dark/70 text-sm leading-relaxed border-t border-medical-beige/50">
+                        Reservamos tempo adequado para cada paciente, geralmente entre 30 a 60 minutos na primeira consulta, garantindo uma avaliação completa e espaço para tirar todas as dúvidas.
+                    </div>
+                </div>
+                
+                <div class="border border-medical-beige rounded-xl overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex items-center justify-between bg-medical-cream/30 hover:bg-medical-cream/50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-medium text-medical-dark">É possível fazer telemedicina?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-medical-gold transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 py-4 bg-white text-medical-dark/70 text-sm leading-relaxed border-t border-medical-beige/50">
+                        Sim! Oferecemos consultas online para acompanhamentos, renovação de receitas e orientações quando apropriado. Ideal para pacientes que não podem comparecer presencialmente.
+                    </div>
+                </div>
+                
+                <div class="border border-medical-beige rounded-xl overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex items-center justify-between bg-medical-cream/30 hover:bg-medical-cream/50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-medium text-medical-dark">O que levar na primeira consulta?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-medical-gold transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 py-4 bg-white text-medical-dark/70 text-sm leading-relaxed border-t border-medical-beige/50">
+                        Traga exames recentes (se tiver), lista de medicamentos em uso, documento com foto e cartão do convênio (se aplicável). Também é útil anotar suas principais queixas e dúvidas.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-medical-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="font-serif text-2xl font-semibold text-white">Dra.</span>
+                        <span class="font-serif text-2xl italic text-medical-gold">Aiane Batalha</span>
+                    </div>
+                    <p class="text-white/60 text-sm leading-relaxed max-w-sm">
+                        Médica, Mestre em Saúde da Família e Nutróloga. Comprometida com o cuidado humanizado e a promoção da saúde em todas as fases da vida.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-lg font-semibold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-sm text-white/60">
+                        <li><a href="#sobre" class="hover:text-medical-gold transition-colors">Sobre</a></li>
+                        <li><a href="#trajetoria" class="hover:text-medical-gold transition-colors">Trajetória</a></li>
+                        <li><a href="#atendimento" class="hover:text-medical-gold transition-colors">Atendimento</a></li>
+                        <li><a href="#contato" class="hover:text-medical-gold transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-lg font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-sm text-white/60">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-medical-gold"></i>
+                            (31) 99999-9999
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-medical-gold"></i>
+                            contato@draiane.com
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-medical-gold"></i>
+                            Ipatinga, MG
+                        </li>
+                    </ul>
+                    
+                    <div class="flex gap-4 mt-6">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-medical-gold transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-medical-gold transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-medical-gold transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/40 text-xs">
+                    © 2024 Dra. Aiane Xavier Felipe Batalha. Todos os direitos reservados.
+                </p>
+                <p class="text-white/40 text-xs text-center md:text-right">
+                    CRM-MG: [Número] | RQE: [Número]<br>
+                    Responsável Técnica: Dra. Aiane Xavier Felipe Batalha
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+        
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+        
+        // FAQ Toggle
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('[data-lucide="chevron-down"]');
+            
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                answer.classList.add('hidden');
+                icon.style.transform = 'rotate(0)';
+            }
+        }
+        
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+        
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+        
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
